@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JuVale</title>
+<link rel="icon" type="image/png" href="images/logoJuvale.png">
+
+<meta name="description" content="JuVale. Dos personas, un mismo proyecto: sitios web a medida para tu negocio.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/juValeStyle.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="nav container">
+    <a href="#inicio" class="logo">
+      <!-- El logo ahora está libre de comentarios rotos -->
+      <img src="images/logoJuvale.png" alt="Logo de JuVale" class="logoJuvale">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">El dúo</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#proceso">Procesos</a></li>
+      <li><a href="#contacto">Contactos</a></li>
+    </ul>
+    <a href="#contacto" class="btn solid nav-cta">Contanos tu idea</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">El dúo</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn solid">Iniciar proyecto</a>
+  </div>
+</header>
+
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="hero" style="border-bottom:none;">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1>Tu idea, hecha un sitio <em>a tu medida</em></h1>
+      <p>Somos un dúo de desarrollo en Río Cuarto. Diseñamos y construimos sitios web para negocios que quieren verse tan bien online como en persona.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn solid">Contanos tu proyecto</a>
+        <a href="#proyectos" class="btn">Ver proyectos</a>
+      </div>
+    </div>
+    <div class="hero-sketch" aria-hidden="true">
+      <svg viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect class="draw d1" x="30" y="30" width="360" height="270" rx="4"/>
+        <line class="draw d2" x1="30" y1="76" x2="390" y2="76"/>
+        <circle class="draw d2" cx="52" cy="53" r="5"/>
+        <circle class="draw d2" cx="70" cy="53" r="5"/>
+        <circle class="draw d2" cx="88" cy="53" r="5"/>
+        <rect class="draw d3" x="52" y="98" width="150" height="150" rx="2"/>
+        <line class="draw d4" x1="222" y1="106" x2="368" y2="106"/>
+        <line class="draw d4" x1="222" y1="128" x2="368" y2="128"/>
+        <line class="draw d4" x1="222" y1="150" x2="330" y2="150"/>
+        <line class="draw d5" x1="222" y1="188" x2="330" y2="188" stroke-width="10"/>
+        <line class="draw d6" x1="52" y1="272" x2="200" y2="272"/>
+        <path class="draw d7" d="M60 300 L120 268 L160 288 L220 240" stroke-dasharray="6 8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <h2>Todo lo que tu negocio necesita online</h2>
+      <p>Desde una landing page hasta un sitio completo con varias secciones, adaptado a lo que tu negocio realmente necesita — nada de plantillas genéricas.</p>
+    </div>
+    <ul class="service-list">
+      <li class="service-row">
+        <span class="service-title">Sitios a medida</span>
+        <p>Diseño y desarrollo de páginas pensadas para tu marca, desde cero y a partir de tu contenido real.</p>
+      </li>
+      <li class="service-row">
+        <span class="service-title">Diseño responsivo</span>
+        <p>Tu sitio se ve bien en celular, tablet y escritorio, sin excepciones ni ajustes de último momento.</p>
+      </li>
+      <li class="service-row">
+        <span class="service-title">Mantenimiento</span>
+        <p>Actualizamos contenido y damos soporte una vez que el sitio está online: hosting, dominio, certificado/s SSL, backups incluidos, etc.</p>
+      </li>
+      <li class="service-row">
+        <span class="service-title">Optimización</span>
+        <p>Cuidamos la velocidad de carga y el SEO básico para que tu sitio aparezca mejor posicionado.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ EL DÚO (about, imagen al lado del texto) ============ -->
+<section id="nosotros">
+  <div class="container">
+    <div class="section-head">
+      <h2>Detrás de JuVale</h2>
+      <p>Dos perfiles complementarios trabajando juntos en cada proyecto, de una idea simple a un sitio hecho realidad.</p>
+    </div>
+
+    <div class="duo-row">
+      <div class="img-frame duo-photo" data-label="equipo-1.jpg">
+        <img class="id1" src="images/fotoVale.png" alt="FotoVale">
+      </div>
+      <div class="duo-text">
+        <h3>Valentín</h3>
+        <span class="role">Diseño y contacto con clientes</span>
+        <p>Escucha lo que tu negocio necesita, arma la propuesta y coordina cada entrega — del primer mensaje a la firma final.</p>
+      </div>
+    </div>
+
+    <div class="duo-row reverse">
+      <div class="img-frame duo-photo" data-label="equipo-2.jpg">
+        <img class="id2" src="images/fotoJu.png" alt="FotoJu">
+      </div>
+      <div class="duo-text">
+        <h3>Julián</h3>
+        <span class="role">Desarrollo y diseño</span>
+        <p>Encargado de que cada sitio se vea bien y sea fácil de manejar: del boceto a la pantalla. Un diseño funcional, acorde a lo que el negocio necesita para cumplir su objetivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS (portfolio asimétrico) ============ -->
+<section id="proyectos">
+  <div class="container">
+    <div class="section-head">
+      <h2>Algunos proyectos recientes</h2>
+      <p>Una muestra de sitios que desarrollamos para distintos rubros.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card featured">
+        <div class="img-frame" data-label="proyecto-velvore.jpg">
+          <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">
+            <img class="ph" src="images/capturaVelvoreParfum.png" alt="Captura del sitio web Velvore Parfum">
+          </a>
+        </div>
+        <div class="work-info">
+          <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">Velvore Parfum</a>
+          <span class="tag">Tienda online · Perfumería</span>
+        </div>
+      </article>
+      <div class="work-stack">
+        <article class="work-card">
+          <div class="img-frame" data-label="proyecto-rostiseria.jpg">
+            <a href="https://julian013.github.io/rostiseriaJoseYMaria/" target="_blank">
+              <img class="ph" src="images/capturaRostiseria.png" alt="Captura del sitio web de una rostisería">
+            </a>
+          </div>
+          <div class="work-info">
+            <a href="" target="_blank">Rostisería</a>
+            <span class="tag">Comercio</span>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="img-frame" data-label="proyecto-instituto.jpg">
+            <a href="https://bars604.vercel.app/" target="_blank">
+              <img class="ph" src="images/capturaB604.png" alt="Captura del sitio web del Instituto del EA">
+            </a>
+          </div>
+          <div class="work-info">
+            <a href="https://bars604.vercel.app/" target="_blank">Instituto del EA</a>
+            <span class="tag">Sitio institucional · Servicios</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO (línea de tiempo) ============ -->
+<section id="proceso">
+  <div class="container">
+    <div class="section-head">
+      <h2>De la idea al sitio online</h2>
+    </div>
+    <div class="process-line">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Reunión inicial</h3>
+        <p>Escuchamos qué necesita tu negocio y definimos el alcance del sitio.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Diseño</h3>
+        <p>Armamos una propuesta inicial con tiempos, contenido e imágenes de referencia.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Planes</h3>
+        <p>Conversamos sobre los planes disponibles y elegimos el que mejor se ajusta a tu presupuesto.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3>Desarrollo</h3>
+        <p>Construimos el sitio y nos reunimos en el transcurso para ultimar detalles.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">05</span>
+        <h3>Entrega</h3>
+        <p>Publicamos el sitio con todo lo acordado y formalizamos la entrega final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" style="border-bottom:none;">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contanos sobre tu proyecto</h2>
+    </div>
+    <div class="contact-grid">
+      <form>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" placeholder="Tu nombre" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="tu@email.com" required>
+        </div>
+        <div>
+          <label for="negocio">Nombre del negocio</label>
+          <input id="negocio" type="text" placeholder="Opcional">
+        </div>
+        <div>
+          <label for="mensaje">Contanos qué necesitás</label>
+          <textarea id="mensaje" placeholder="Tipo de sitio, plazos, ideas..."></textarea>
+        </div>
+        <button type="submit" class="btn solid" style="align-self:flex-start;">Enviar mensaje</button>
+      </form>
+      <div class="contact-info">
+        <span class="label">Email</span>
+        <p>juvale@gmail.com</p>
+        <span class="label">WhatsApp</span>
+        <p>+54 9 358 510-3101</p>
+        <span class="label">Zona de trabajo</span>
+        <p>Río Cuarto, Córdoba, Argentina — trabajo remoto disponible en todo el país.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M4 26 L4 6 L14 6" /><path d="M28 6 L28 26 L18 26" /></svg>
+          </span>
+          JuVale
+        </a>
+        <p>Dúo de desarrollo webs. Creamos sitios a medida para negocios y empresas.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/juvale._?stkn=b201c2ZoZTlrYm41" target="_blank" rel="noopener">
+    <img src="images/icono-Instagram.png" alt="Instagram" class="social-icon"> Instagram
+          </a>
+          <a href="https://wa.me/5493585103101?text=Hola!%20Quiero%20consultar%20un%20pedido..." target="_blank" rel="noopener">
+            <img src="images/logoWhatsapp.png" alt="WhatsApp" class="social-icon"> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:juvale@gmail.com">juvale@gmail.com</a>
+        <a href="https://wa.me/5493585103101" target="_blank" rel="noopener">+54 9 358 510-3101</a>
+        <p>Río Cuarto, Córdoba, AR</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <p>© 2026 JuVale. Todos los derechos reservados.</p>
+        <p>Términos de servicio</p>
+        <p>Política de privacidad</p>
+        <!--
+        <a href="#">Términos de servicio</a>
+        <a href="#">Política de privacidad</a>
+      -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/juVale.js"></script>
+<!-- Botón flotante de WhatsApp -->
+<a
+  href="https://wa.me/5493585103101?text=Hola!%20Quiero%20consultar%20un%20pedido..."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chatear por WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.4 8.5 3.4 15.4c0 2.4.7 4.6 1.9 6.5L3 29l7.3-2.2c1.8 1 3.9 1.6 6 1.6h.1c7 0 12.6-5.5 12.6-12.4C29 8.5 23.3 3 16 3zm0 22.6h-.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.4-4.2-.3-.4a10 10 0 0 1-1.6-5.4C5.4 9.9 10.1 5.4 16 5.4c5.9 0 10.6 4.5 10.6 10 0 5.6-4.7 10.2-10.6 10.2zm5.8-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.8 5 .8.3 1.4.6 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+</body>
+</html>
