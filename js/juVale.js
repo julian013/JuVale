@@ -30,11 +30,35 @@ const io = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => io.observe(el));
 
-// Formulario de contacto (ejemplo)
-const contactForm = document.querySelector('#contacto form');
+// Formulario de contacto -> envía por Web3Forms al mail de JuVale
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
 if (contactForm){
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    alert('Formulario de ejemplo — conectá esto a tu email o servicio de formularios.');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    formStatus.textContent = 'Enviando...';
+
+    try{
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      });
+      const data = await res.json();
+
+      if (data.success){
+        formStatus.textContent = '¡Listo! Te vamos a responder a la brevedad.';
+        contactForm.reset();
+      } else {
+        formStatus.textContent = 'Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp.';
+      }
+    } catch (err){
+      formStatus.textContent = 'Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp.';
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 }

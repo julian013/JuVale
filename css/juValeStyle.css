@@ -73,7 +73,6 @@ em{ font-style:italic; font-weight:500; color:var(--accent); }
 
 :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 
-/* Logo de Juvale en el header */
 .logoJuvale {
   width: 300px; 
   height: 100px; 
@@ -81,9 +80,14 @@ em{ font-style:italic; font-weight:500; color:var(--accent); }
   margin-left: 40px; 
 }
 
+@media (max-width: 799px){
+  .logoJuvale{
+    width: 130px;
+    height: 44px;
+    margin-left: 0;
+  }
+}
 
-
-/* ============ IMAGE PLACEHOLDER (marco tipo plano técnico) ============ */
 .img-frame{
   position:relative;
   overflow:hidden;
@@ -108,7 +112,6 @@ em{ font-style:italic; font-weight:500; color:var(--accent); }
 }
 .img-frame:hover img.ph{ filter:grayscale(0%) brightness(1); transform:scale(1.02); }
 .img-frame{ min-height:180px; }
-/* Mientras no haya imagen real, se ve el nombre de archivo sugerido en data-label */
 .img-frame::after{
   content: attr(data-label);
   position:absolute;
@@ -127,7 +130,6 @@ em{ font-style:italic; font-weight:500; color:var(--accent); }
 }
 .img-frame img.ph[src]:not([src=""]){ position:relative; z-index:1; }
 
-/* ============ HEADER / NAV ============ */
 header{
   position:fixed;
   top:0; left:0; right:0;
@@ -216,13 +218,15 @@ header{
 .mobile-menu .btn{ align-self:flex-start; }
 @media(min-width:800px){ .mobile-menu{ display:none !important; } }
 
-/* ============ HERO (texto + boceto al lado) ============ */
 .hero{
   min-height:100svh;
   display:flex;
   align-items:center;
   padding-top:6rem;
   padding-bottom:4rem;
+}
+@media (max-width: 799px){
+  .hero{ padding-top:7.5rem; }
 }
 .hero-grid{
   display:grid;
@@ -273,7 +277,6 @@ header{
   .hero-sketch .draw{ animation:none; stroke-dashoffset:0; }
 }
 
-/* ============ SECTION GENERICO ============ */
 section{
   padding:5.5rem 0;
   border-bottom:1px solid var(--line);
@@ -285,7 +288,6 @@ section{
 .section-head h2{ font-size:clamp(1.8rem, 4.2vw, 2.4rem); }
 .section-head p{ margin-top:1rem; color:var(--ink-soft); max-width:52ch; }
 
-/* ---- Servicios: lista editorial, no tarjetas ---- */
 .service-list{ border-top:1px solid var(--line); }
 .service-row{
   display:grid;
@@ -305,7 +307,6 @@ section{
 }
 .service-row p{ color:var(--ink-soft); max-width:52ch; }
 
-/* ---- El dúo: imagen al lado del texto, alternado ---- */
 .duo-row{
   display:grid;
   grid-template-columns:1fr;
@@ -351,7 +352,6 @@ section{
   object-fit:contain;
 }
 
-/* ---- Proyectos: asimétrico ---- */
 .work-grid{
   display:grid;
   grid-template-columns:1fr;
@@ -360,6 +360,7 @@ section{
 @media(min-width:760px){
   .work-grid{ grid-template-columns:1.3fr 1fr; }
 }
+.work-main{ display:grid; gap:1.6rem; }
 .work-stack{ display:grid; gap:1.6rem; }
 .work-card .img-frame{ aspect-ratio:4/3; margin-bottom:0.9rem; }
 .work-card.featured .img-frame{ aspect-ratio:16/11; }
@@ -367,7 +368,6 @@ section{
 .work-info a:hover{ color:var(--accent); }
 .work-info .tag{ display:block; font-size:0.8rem; color:var(--ink-soft); margin-top:0.2rem; }
 
-/* ---- Proceso: línea de tiempo horizontal ---- */
 .process-line{
   display:grid;
   grid-template-columns:1fr;
@@ -405,7 +405,6 @@ section{
 .process-step h3{ font-size:1.05rem; margin-bottom:0.4rem; }
 .process-step p{ font-size:0.92rem; color:var(--ink-soft); }
 
-/* ---- Contacto ---- */
 .contact-grid{
   display:grid;
   grid-template-columns:1fr;
@@ -435,7 +434,6 @@ textarea{ resize:vertical; min-height:120px; }
 .contact-info .label:first-child{ margin-top:0; }
 .contact-info p{ color:var(--ink-soft); }
 
-/* ============ FOOTER ============ */
 footer{
   background:var(--footer-bg);
   color:var(--ink);
@@ -493,7 +491,6 @@ footer .logo{ color:var(--ink); }
   object-fit: contain;
 }
 
-/* Botón flotante WhatsApp */
 .whatsapp-float{
   position:fixed;
   bottom:2rem;
@@ -512,7 +509,6 @@ footer .logo{ color:var(--ink); }
 }
 .whatsapp-float:hover{ transform:translateY(-3px); box-shadow:0 10px 22px rgba(0,0,0,0.45); }
 
-/* ============ REVEAL: un único tipo de aparición, para encabezados de sección ============ */
 .section-head{ opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease; }
 .section-head.in{ opacity:1; transform:translateY(0); }
 

@@ -20,7 +20,6 @@
 <header>
   <nav class="nav container">
     <a href="#inicio" class="logo">
-      <!-- El logo ahora está libre de comentarios rotos -->
       <img src="images/logoJuvale.png" alt="Logo de JuVale" class="logoJuvale">
     </a>
     <ul class="nav-links">
@@ -142,18 +141,18 @@
       <p>Una muestra de sitios que desarrollamos para distintos rubros.</p>
     </div>
     <div class="work-grid">
-      <article class="work-card featured">
-        <div class="img-frame" data-label="proyecto-velvore.jpg">
-          <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">
-            <img class="ph" src="images/capturaVelvoreParfum.png" alt="Captura del sitio web Velvore Parfum">
-          </a>
-        </div>
-        <div class="work-info">
-          <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">Velvore Parfum</a>
-          <span class="tag">Tienda online · Perfumería</span>
-        </div>
-      </article>
-      <div class="work-stack">
+      <div class="work-main">
+        <article class="work-card featured">
+          <div class="img-frame" data-label="proyecto-velvore.jpg">
+            <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">
+              <img class="ph" src="images/capturaVelvoreParfum.png" alt="Captura del sitio web Velvore Parfum">
+            </a>
+          </div>
+          <div class="work-info">
+            <a href="https://julian013.github.io/VelvoreParfum/" target="_blank">Velvore Parfum</a>
+            <span class="tag">Tienda online · Perfumería</span>
+          </div>
+        </article>
         <article class="work-card">
           <div class="img-frame" data-label="proyecto-rostiseria.jpg">
             <a href="https://julian013.github.io/rostiseriaJoseYMaria/" target="_blank">
@@ -165,6 +164,9 @@
             <span class="tag">Comercio</span>
           </div>
         </article>
+      </div>
+
+      <div class="work-stack">
         <article class="work-card">
           <div class="img-frame" data-label="proyecto-instituto.jpg">
             <a href="https://bars604.vercel.app/" target="_blank">
@@ -174,6 +176,17 @@
           <div class="work-info">
             <a href="https://bars604.vercel.app/" target="_blank">Instituto del EA</a>
             <span class="tag">Sitio institucional · Servicios</span>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="img-frame" data-label="proyecto-dietetica.jpg">
+            <a href="https://tiendaseatwell.com/?srsltid=AfmBOoqCKbWaHPsFGp1UZBO_t1nwlAeMmUTW8U8bMm1ZSLd3IXhMQubI" target="_blank">
+              <img class="ph" src="images/capturaDietetica.png" alt="Captura del sitio web de La Duvalina, dietética">
+            </a>
+          </div>
+          <div class="work-info">
+            <a href="https://tiendaseatwell.com/?srsltid=AfmBOoqCKbWaHPsFGp1UZBO_t1nwlAeMmUTW8U8bMm1ZSLd3IXhMQubI" target="_blank">Dietetica</a>
+            <span class="tag">Tienda online · Nutrición</span>
           </div>
         </article>
       </div>
@@ -224,24 +237,30 @@
       <h2>Contanos sobre tu proyecto</h2>
     </div>
     <div class="contact-grid">
-      <form>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="dfa76369-8248-4fd1-a04e-efa1cad02ebf">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde el sitio de JuVale">
+        <input type="hidden" name="from_name" value="Formulario JuVale">
+        <input type="checkbox" name="botcheck" style="display:none">
+ 
         <div>
           <label for="nombre">Nombre</label>
-          <input id="nombre" type="text" placeholder="Tu nombre" required>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
         </div>
         <div>
           <label for="email">Email</label>
-          <input id="email" type="email" placeholder="tu@email.com" required>
+          <input id="email" name="email" type="email" placeholder="tu@email.com" required>
         </div>
         <div>
           <label for="negocio">Nombre del negocio</label>
-          <input id="negocio" type="text" placeholder="Opcional">
+          <input id="negocio" name="negocio" type="text" placeholder="Opcional">
         </div>
         <div>
           <label for="mensaje">Contanos qué necesitás</label>
-          <textarea id="mensaje" placeholder="Tipo de sitio, plazos, ideas..."></textarea>
+          <textarea id="mensaje" name="mensaje" placeholder="Tipo de sitio, plazos, ideas..." required></textarea>
         </div>
         <button type="submit" class="btn solid" style="align-self:flex-start;">Enviar mensaje</button>
+        <p id="formStatus" class="form-status"></p>
       </form>
       <div class="contact-info">
         <span class="label">Email</span>
@@ -285,14 +304,10 @@
       </div>
 
       <div class="footer-col">
-        <h4>Legal</h4>
+        <!--<h4>Legal</h4>-->
         <p>© 2026 JuVale. Todos los derechos reservados.</p>
         <p>Términos de servicio</p>
         <p>Política de privacidad</p>
-        <!--
-        <a href="#">Términos de servicio</a>
-        <a href="#">Política de privacidad</a>
-      -->
       </div>
     </div>
   </div>
